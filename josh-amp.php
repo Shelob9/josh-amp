@@ -54,7 +54,7 @@ add_action( 'pre_amp_render_post', function () {
 			$menu_list = sprintf( '<br /><ul id="%s" class="jp-amp-list">Menu: ', esc_attr( 'amp-jp-menu-' . $menu_name ) );
 
 			foreach ( $menu_items as $key => $menu_item ) {
-				$menu_list .= sprintf( '<li><a href="%s">%s</a></li>', amp_get_permalink( $menu_item->ID ), esc_html( $menu_item->title ) );
+				$menu_list .= sprintf( '<li><a href="%s">%s</a></li>', amp_get_permalink( $menu_item->object_id ), esc_html( $menu_item->title ) );
 			}
 
 			$menu_list .= '</ul>';
@@ -88,8 +88,3 @@ add_action( 'pre_amp_render_post', function () {
 		return $content;
 	}, 1000 );
 });
-
-
-//jetpack_the_site_logo()
-
-

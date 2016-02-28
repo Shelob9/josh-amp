@@ -45,7 +45,7 @@ add_action( 'pre_amp_render_post', function () {
 	 * Add menu
 	 */
 	add_filter( 'the_content', function( $content ){
-		$menu_name = 'primary';
+		$menu_name = 'amp';
 		$menu = wp_get_nav_menu_object( $menu_name );
 
 		if ( ! empty( $menu ) ) {
